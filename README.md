@@ -1,4 +1,4 @@
-# portal
+# Wheat VIVO Portal
 VIVO extension for the public display of Wheat VIVO, including:
 - Data feedback
 - Display of data provenance information and links to upstream data providers for administrators responding to feedback
