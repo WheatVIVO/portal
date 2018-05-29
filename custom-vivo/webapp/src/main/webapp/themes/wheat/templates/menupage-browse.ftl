@@ -45,7 +45,7 @@
                         <input type="text" name="querytext" class="search-homepage fl dib pa2 w-70" value="" autocapitalize="off" />
                         <input type="submit" value="${i18n().search_button}"
                           class="search dib fl pa2 w-30 input-reset white bg-black bb bb-0 b--black br2 br--right" />
-                        <input type="hidden" name="classgroup"  value="${classGroupURI}" autocapitalize="off" />
+                        <input type="hidden" name="classgroup"  value="${classGroupUri}" autocapitalize="off" />
                     </div>
   
                 </form>
