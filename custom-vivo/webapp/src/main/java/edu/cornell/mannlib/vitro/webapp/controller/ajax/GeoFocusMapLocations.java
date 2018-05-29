@@ -54,7 +54,9 @@ public class GeoFocusMapLocations extends AbstractAjaxResponder {
         + "    ?location geo:hasMember ?sublocation  . \n"
         + "    ?location rdfs:label ?label .  \n"
         + "    ?sublocation obo:RO_0001015 ?person .  \n"
-        + "} }  \n"
+        + "}  \n"
+	+ "FILTER NOT EXISTS { ?person a <http://vivo.wheatinitiative.org/ontology/ExternalToWheat> } \n"
+	+ "}  \n"
         + "GROUP BY ?label ?location  \n";
     
 	public GeoFocusMapLocations(HttpServlet parent, VitroRequest vreq,

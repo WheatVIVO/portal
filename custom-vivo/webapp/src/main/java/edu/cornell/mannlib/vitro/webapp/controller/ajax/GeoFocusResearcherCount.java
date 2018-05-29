@@ -36,6 +36,7 @@ public class GeoFocusResearcherCount extends AbstractAjaxResponder {
         + "SELECT DISTINCT (COUNT(DISTINCT ?person) AS ?count)  \n"
         + "WHERE {  \n"
         + "    ?person obo:RO_0001025 ?focus   \n"
+        + "    FILTER NOT EXISTS { ?person a <http://vivo.wheatinitiative.org/ontology/ExternalToWheat> } \n"
         + "}" ;
     
 	public GeoFocusResearcherCount(HttpServlet parent, VitroRequest vreq,
