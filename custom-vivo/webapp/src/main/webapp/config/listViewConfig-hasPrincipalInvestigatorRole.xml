@@ -137,7 +137,7 @@ OPTIONAL
         {
             ?subject ?property ?role .
 
-            ?role a core:CoPrincipalInvestigatorRole .
+            ?role a core:PrincipalInvestigatorRole .
             ?role &lt;http://purl.obolibrary.org/obo/BFO_0000054&gt; ?activity .
             ?activity rdfs:label ?activityLabel .
 
@@ -153,14 +153,14 @@ OPTIONAL
         {
 	    {
 	        ?subject ?property ?role .
-                ?role a core:CoPrincipalInvestigatorRole .
+                ?role a core:PrincipalInvestigatorRole .
                 ?role &lt;http://purl.obolibrary.org/obo/BFO_0000054&gt; ?activity .
                 ?activity rdfs:label ?activityLabel .
 	    }
 	    UNION 
             {
 	        ?subject ?property ?role .
-                ?role a core:CoPrincipalInvestigatorRole .
+                ?role a core:PrincipalInvestigatorRole .
                 ?role &lt;http://purl.obolibrary.org/obo/BFO_0000054&gt; ?activity .
                 ?activity core:dateTimeInterval ?dateTimeIntervalGrant .
                 ?dateTimeIntervalGrant core:start ?dateTimeStartValueGrant .
@@ -169,7 +169,7 @@ OPTIONAL
             UNION
             {
 	        ?subject ?property ?role .
-                ?role a core:CoPrincipalInvestigatorRole .
+                ?role a core:PrincipalInvestigatorRole .
                 ?role &lt;http://purl.obolibrary.org/obo/BFO_0000054&gt; ?activity .
                 ?activity core:dateTimeInterval ?dateTimeIntervalGrant .
                 ?dateTimeIntervalGrant core:end ?dateTimeEndValueGrant .
