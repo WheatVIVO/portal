@@ -13,7 +13,7 @@
 
 <section id="browse-by" role="region" class="cf">
     <nav role="navigation" class="main-nav mb4 sticky top-0 top-2-l w5-l fl-l">
-        <ul id="browse-classes" class="bg-main nowrap overflow-y-auto-l">
+        <ul id="browse-classes" class="bg-main nowrap overflow-x-scroll overflow-y-auto-l">
             <#list vClassGroup?sort_by("displayRank") as vClass>
                 <#------------------------------------------------------------
                 Need to replace vClassCamel with full URL that allows function
@@ -37,24 +37,19 @@
         </ul>
     </nav>
 
-<section id="search-home" role="region" class="mt4 center cf">
-                <h3 class="f3 mb3">Search <span class="search-filter-selected mb3">filteredSearch</span></h3>
-
-                <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" >
-                    <div id="search-home-field cf">
-                        <input type="text" name="querytext" class="search-homepage fl dib pa2 w-70" value="" autocapitalize="off" />
-                        <input type="submit" value="${i18n().search_button}"
-                          class="search dib fl pa2 w-30 input-reset white bg-black bb bb-0 b--black br2 br--right" />
-                        <input type="hidden" name="classgroup"  value="${classGroupUri}" autocapitalize="off" />
-                    </div>
-  
-                </form>
-
-</section> <!-- #search-home -->
-
-
 
     <div class="fr-l w-70-l" role="main">
+
+        <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" class="center mw6-ns cf mb4">
+            <div id="search-home-field cf">
+                <input type="text" name="querytext" class="search-homepage fl dib pa2 w-70" value="" autocapitalize="off" />
+                <input type="submit" value="${i18n().search_button}"
+                  class="search dib fl pa2 w-30 input-reset white bg-black bb bb-0 b--black br2 br--right" />
+                <input type="hidden" name="classgroup"  value="${classGroupUri}" autocapitalize="off" />
+            </div>
+
+        </form>
+
       <nav id="alpha-browse-container" role="navigation" class="sticky top-0 bg-white nowrap overflow-x-scroll">
           <h3 class="selected-class"></h3>
           <#assign alphabet = ["A", "B", "C", "D", "E", "F", "G" "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"] />
@@ -66,6 +61,7 @@
               </#list>
           </ul>
       </nav>
+
 
       <section id="individuals-in-class" role="region">
 

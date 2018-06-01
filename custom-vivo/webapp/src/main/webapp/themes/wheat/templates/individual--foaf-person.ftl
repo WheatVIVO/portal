@@ -26,7 +26,7 @@
 
 <section id="individual-intro" class="vcard person mb4" role="region">
 
-    <section id="individual-info" ${infoClass!} class="flex-l justify-between-l mb4" role="region">
+    <section id="individual-info" ${infoClass!} class="flex-l justify-between-l mb4 relative" role="region">
 
         <#-- Where to put this? -->
         <#include "individual-adminPanel.ftl">

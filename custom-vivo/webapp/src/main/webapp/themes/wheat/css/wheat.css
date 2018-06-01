@@ -733,28 +733,28 @@ h1.vivo-logo a {
 }
 /* HEADER NAV------>  */
 ul#header-nav {
-    float: right;
+    /* float: right; */
     list-style: none;
     background-color: #8bae28;
-    padding: 0.5rem 0;
-    margin-right: 40px;
+    /* padding: 0.5rem 0; */
+    /* margin-right: 40px; */
 }
-ul#header-nav li {
-    float: left;
-    display: block;
-    padding: 0 0.5rem;
+ul#header-nav > li {
+    /* float: left; */
+    /* display: block; */
+    /* padding: 0 0.5rem; */
+    /* font-size: 0.8em; */
     border-right: 1px solid #7c7d7f;
-    font-size: .8rem;
     color: #fff;
 }
 ul#header-nav li:last-child {
     border-right: none;
 }
-ul#header-nav a:hover,
+/* ul#header-nav a:hover,
 ul#header-nav a:active {
     text-decoration: none;
     color: #999;
-}
+} */
 
 /* SEARCH ------>  */
 #search {
@@ -1670,10 +1670,20 @@ article.property ul.property-list {
 /* ADMIN PANEL ------>  */
 #admin {
   background-color: #f2f9fb;
-  position: absolute;
-  top: -64px;
-  height: 60px;
+  width: 100%;
+  max-width: 64em;
+  margin-bottom: 2rem;
 }
+@media screen and (min-width: 60em) {
+  #admin {
+    position: absolute;
+    top: -64px;
+    height: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 #admin h3 {
     background: #2485AE;
     color: #fff;
