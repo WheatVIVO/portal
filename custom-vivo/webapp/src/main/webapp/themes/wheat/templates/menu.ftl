@@ -18,7 +18,7 @@
             </li>
         </#list>
         <li role="listitem" class="dib-ns bb b--main-lighter bn-ns fl-l">
-          <a href="${urls.base}/contact" class="db pv2 pl2 no-underline white-80 fw7 pa3-ns dib-ns hover-bg-main-darker">${i18n().menu_contactus}</a>
+          <a href="${urls.base}/contact" class="db pv2 pl2 no-underline white-80 fw7 pa3-ns dib-ns hover-bg-main-darker">Contact us</a>
         </li>
         <li role="listitem" class="pt2 dn-ns">
           <a href="${urls.login}" class="db white-80 fw7 pv2 no-underline"><span class="fw5 white-80">Are you an admin?</span> Login!</a>
