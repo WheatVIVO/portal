@@ -1677,7 +1677,7 @@ article.property ul.property-list {
 @media screen and (min-width: 60em) {
   #admin {
     position: absolute;
-    top: -64px;
+    /* top: -64px; hides panel if in effect */
     height: 60px;
     left: 50%;
     transform: translateX(-50%);
