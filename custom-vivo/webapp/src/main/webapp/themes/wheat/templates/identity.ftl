@@ -27,6 +27,7 @@
           </div>
         </div>
 
+<#-- remove social media links per Xuan 08-2018
         <div id="block-block-33" class="block block-block no-title" >
           <div class="block-inner clearfix">
             <div class="block-content content">
@@ -39,6 +40,7 @@
             </div>
           </div>
         </div>
+-->
 
      </div>
    </div>
