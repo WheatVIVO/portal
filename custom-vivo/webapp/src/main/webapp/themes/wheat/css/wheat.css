@@ -1676,7 +1676,7 @@ article.property ul.property-list {
 }
 @media screen and (min-width: 60em) {
   #admin {
-    position: absolute;
+    /* position: absolute; tends to obscure label when in effect */
     /* top: -64px; hides panel if in effect */
     height: 60px;
     left: 50%;
