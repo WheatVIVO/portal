@@ -1,5 +1,5 @@
-# Wheat VIVO Portal
-VIVO extension for the public display of Wheat VIVO.
+# WheatVIVO Portal
+VIVO extension for the public display of WheatVIVO.
 ## Installation
 WheatVIVO portal is a customization of VIVO 1.9.3.  Refer to the VIVO 1.9.x installation instructions here: <https://wiki.duraspace.org/display/VIVODOC19x/VIVO+1.9.x+Documentation> .  Additions to or changes of the standard installation instructions are noted below.
 ### Functional Overview
