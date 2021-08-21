@@ -1,3 +1,5 @@
+<#include "gtag.ftl">
+
 <#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
 
 <meta charset="utf-8" />
@@ -19,13 +21,13 @@
 </#if>
 
 
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" />
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic" />
 
 <#include "stylesheets.ftl">
-<link rel="stylesheet" href="${urls.theme}/css/screen.css" />
+<link rel="stylesheet" href="${urls.theme}/css/screen.css?v=20210812a" />
 
-<link rel="shortcut icon" href="http://www.wheatinitiative.org/sites/all/themes/wheatinitiative/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortcut icon" href="https://www.wheatinitiative.org/sites/all/themes/wheatinitiative/favicon.ico" type="image/vnd.microsoft.icon" />
 
 <#include "headScripts.ftl">
 

@@ -25,11 +25,10 @@
 <#include "individual-orcidInterface.ftl">
 
 <section id="individual-intro" class="vcard person mb4" role="region">
-
+        
+    <#include "individual-adminPanel.ftl">
+    
     <section id="individual-info" ${infoClass!} class="flex-l justify-between-l mb4 relative" role="region">
-
-        <#-- Where to put this? -->
-        <#include "individual-adminPanel.ftl">
 
         <section id="individual-main" class="w-80-l">
             <#if relatedSubject??>
@@ -82,7 +81,9 @@
 
                 <div id="photo-wrapper" class="mr3 mb3">${individualImage}</div>
 
-                <div id="individual-tools-people" class="mr3 mb3 relative">
+             <#-- 2021-06-21 BJL: remove this section as QR code as it does not seem to be compatible with modern phone contact app behavior
+             
+               <div id="individual-tools-people" class="mr3 mb3 relative">
                     <h6><strong>Links</strong></h6>
                     <label for="uriIcon">Save URI:
                        <img id="uriIcon" title="${individual.uri}"
@@ -100,6 +101,8 @@
                     </#if>
 
                 </div>
+             
+              -->
 
                 <div class="mr3 mb3">
                   <#include "individual-contactInfo.ftl">

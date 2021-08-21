@@ -38,6 +38,11 @@ ul#header-nav a:visited,
     text-decoration: none;
 }
 
+p {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
 .pagination.menupage {
   position: sticky;
   background: #fff;
@@ -1680,7 +1685,7 @@ article.property ul.property-list {
     /* top: -64px; hides panel if in effect */
     height: 60px;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
   }
 }
 
