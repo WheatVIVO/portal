@@ -52,18 +52,20 @@
             </#if>
              | <a class="terms" href="${urls.termsOfUse}" title="${i18n().menu_termuse}">${i18n().menu_termuse}</a></small> |
         </#if>
-        <small>${i18n().menu_powered} <a class="powered-by-vivo" href="http://vivoweb.org" target="_blank" title="${i18n().menu_powered} VIVO"><strong>VIVO</strong></a></small>
+        <small>${i18n().menu_powered} <a class="powered-by-vivo" href="https://vivoweb.org" target="_blank" title="${i18n().menu_powered} VIVO"><strong>VIVO</strong></a></small>
         <#if user.hasRevisionInfoAccess>
              | ${i18n().menu_version} <a href="${version.moreInfoUrl}" title="${i18n().menu_version}">${version.label}</a>
         </#if>
     </p>
 
     <ul id="footer-nav" role="navigation" class="fr">
-        <li role="listitem"><a href="${urls.about}" title="${i18n().menu_about}">${i18n().menu_about}</a></li>
+        <#-- WheatVIVO : remove about VIVO link -->
+        <#-- <li role="listitem"><a href="${urls.about}" title="${i18n().menu_about}">${i18n().menu_about}</a></li> -->
         <#if urls.contact??>
             <li role="listitem"><a href="${urls.contact}" title="${i18n().menu_contactus}">${i18n().menu_contactus}</a></li>
         </#if>
-        <li role="listitem"><a href="http://www.vivoweb.org/support" target="blank" title="${i18n().menu_support}">${i18n().menu_support}</a></li>
+        <#-- WheatVIVO : remove obsolete VIVO support link -->
+        <#-- <li role="listitem"><a href="https://www.vivoweb.org/support" target="blank" title="${i18n().menu_support}">${i18n().menu_support}</a></li> -->
     </ul>
 </footer>
 
