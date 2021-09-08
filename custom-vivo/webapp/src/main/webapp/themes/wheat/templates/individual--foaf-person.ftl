@@ -24,7 +24,7 @@
 <#--add the VIVO-ORCID interface -->
 <#include "individual-orcidInterface.ftl">
 
-<section id="individual-intro" class="vcard person mb4" role="region">
+<section id="individual-intro" class="vcard person" role="region">
         
     <#include "individual-adminPanel.ftl">
     
@@ -65,7 +65,7 @@
             <#include "individual-overview.ftl">
             </div>
 
-            <section id="share-contact" role="region" class="flex justify-between flex-wrap mb4">
+            <section id="share-contact" role="region" class="flex justify-between flex-wrap">
                 <!-- Image -->
                 <#assign individualImage>
                     <@p.image individual=individual
@@ -104,12 +104,29 @@
              
               -->
 
+                <section id="individual-overview">
+                    <!-- Positions -->
+                    <div class="mb4">
+                        <#include "individual-positions.ftl">
+                    </div>
+
+                    <!-- Research Areas -->
+                    <div class="mb4 cf">
+                        <#include "individual-researchAreas.ftl">
+                    </div>
+
+                    <!-- Geographic Focus -->
+                    <div class="mb4">
+                        <#include "individual-geographicFocus.ftl">
+                    </div>
+
+                    <div class="mb4">
+                        <#include "individual-openSocial.ftl">
+                    </div>
+                </section>
+
                 <div class="mr3 mb3">
                   <#include "individual-contactInfo.ftl">
-                </div>
-
-                <!-- Websites -->
-                <div class="mr3 mb3">
                   <#include "individual-webpage.ftl">
                 </div>
 
@@ -122,26 +139,6 @@
 
     </section>
 
-    <section id="individual-overview">
-        <!-- Positions -->
-        <div class="mb4">
-        <#include "individual-positions.ftl">
-        </div>
-
-        <!-- Research Areas -->
-        <div class="mb4 cf">
-        <#include "individual-researchAreas.ftl">
-        </div>
-
-        <!-- Geographic Focus -->
-        <div class="mb4">
-        <#include "individual-geographicFocus.ftl">
-        </div>
-
-        <div class="mb4">
-        <#include "individual-openSocial.ftl">
-        </div>
-    </section>
 </section>
 
 <#assign nameForOtherGroup = "${i18n().other}">

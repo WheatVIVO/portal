@@ -15,9 +15,7 @@
      next statement -->
 <#macro showPosition statement>
     
-    <#local posTitle>
-        <span itemprop="jobTitle">${statement.positionTitle!statement.hrJobTitle!}</span>
-    </#local>
+    <#local posTitle><#if statement.positionTitle?has_content || statement.hrJobTitle?has_content><span itemprop="jobTitle">${statement.positionTitle!statement.hrJobTitle!}</span></#if></#local>
     <#local linkedIndividual>
         <#if statement.org??>
             <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
