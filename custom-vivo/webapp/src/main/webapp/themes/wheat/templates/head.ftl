@@ -25,7 +25,7 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic" />
 
 <#include "stylesheets.ftl">
-<link rel="stylesheet" href="${urls.theme}/css/screen.css?v=20210908a" />
+<link rel="stylesheet" href="${urls.theme}/css/screen.css?v=20210908b" />
 
 <link rel="shortcut icon" href="https://www.wheatinitiative.org/sites/all/themes/wheatinitiative/favicon.ico" type="image/vnd.microsoft.icon" />
 
