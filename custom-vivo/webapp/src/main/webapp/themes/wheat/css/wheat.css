@@ -9,7 +9,7 @@ img {
 }
 
 #photoCroppingContainer {
-  height: 1280px;
+  min-height: 1280px;
 }
 
 /* Tell the browser to render HTML 5 elements as block */
@@ -275,7 +275,7 @@ input[type="search"] {
 }
 
 .custom-search-box {
-    width: 267px;
+    width: 265px;
 }
 
 .search-form input {
