@@ -28,7 +28,7 @@
         
     <#include "individual-adminPanel.ftl">
     
-    <section id="individual-info" ${infoClass!} class="flex-l justify-between-l mb4 relative" role="region">
+    <section id="individual-info" ${infoClass!} class="flex-l justify-between-l relative" role="region">
 
         <section id="individual-main" class="w-80-l">
             <#if relatedSubject??>
