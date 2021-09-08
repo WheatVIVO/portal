@@ -65,7 +65,7 @@
             <#include "individual-overview.ftl">
             </div>
 
-            <section id="share-contact" role="region" class="flex justify-around flex-wrap mb4">
+            <section id="share-contact" role="region" class="flex justify-between flex-wrap mb4">
                 <!-- Image -->
                 <#assign individualImage>
                     <@p.image individual=individual
@@ -193,7 +193,7 @@
     };
 </script>
 
-${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/individual/individual.css" />',
+${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/individual/individual.css?v=20210908a" />',
                   '<link rel="stylesheet" href="${urls.base}/css/individual/individual-vivo.css" />',
                   '<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/smoothness/jquery-ui-1.8.9.custom.css" />')}
 

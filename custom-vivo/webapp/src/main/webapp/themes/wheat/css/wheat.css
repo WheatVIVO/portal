@@ -3,6 +3,11 @@
 @charset "UTF-8";
 /* CSS Document */
 
+img {
+  /* override Tachyons default that interferes with image upload cropping */
+  max-width: none;
+}
+
 /* Tell the browser to render HTML 5 elements as block */
 header,
 hgroup,

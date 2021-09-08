@@ -5,11 +5,11 @@
 <!-- vitro base styles (application-wide) -->
 <link rel="stylesheet" href="${urls.base}/css/vitro.css" />
 
+<#-- add Tachyons for easy styling through classes -->
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
 
 ${stylesheets.list()}
 
 <#--temporary until edit controller can include this when needed -->
 <link rel="stylesheet" href="${urls.base}/css/edit.css" />
 
-<#-- add Tachyons for easy styling through classes -->
-<link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
