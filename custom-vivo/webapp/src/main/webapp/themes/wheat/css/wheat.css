@@ -8,6 +8,10 @@ img {
   max-width: none;
 }
 
+#photoCroppingContainer {
+  height: 1280px;
+}
+
 /* Tell the browser to render HTML 5 elements as block */
 header,
 hgroup,
