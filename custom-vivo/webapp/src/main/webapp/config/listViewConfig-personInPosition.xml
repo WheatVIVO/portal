@@ -196,6 +196,27 @@
                 ?org obo:BFO_0000050 ?middleOrg .
                 ?middleOrg obo:BFO_0000050 ?outerOrg .
                 ?outerOrg rdfs:label ?outerOrgName .
+	    }
+            # WheatVIVO if positions exist in WI member graph, 
+            # don't show positions from any other graphs.
+            FILTER( !(
+		    NOT EXISTS {
+		        GRAPH ?g { ?position a ?someType }
+                        FILTER(REGEX(STR(?g), "graph/wheatinitiative"))
+		    }
+		    &amp;&amp;
+		    EXISTS {
+                        ?subject ?property ?otherPosition .
+		        ?otherPosition a core:Position .
+		        GRAPH ?h { ?otherPosition a ?someOtherType }
+                        FILTER(REGEX(STR(?h), "graph/wheatinitiative"))
+		    }
+		    ) )
+	    FILTER NOT EXISTS {
+                ?subject ?property ?position2 .
+                ?position2 a core:Position .
+                ?position2 core:relates ?org .
+                FILTER(STR(?position2) &lt; STR(?position))
             }
         }
     </query-construct>
