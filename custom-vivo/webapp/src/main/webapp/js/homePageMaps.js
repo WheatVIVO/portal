@@ -199,12 +199,12 @@ $(document).ready(function(){
         if ( !globalMapBuilt ) {
         
             var mapGlobal = L.map('mapGlobal').setView([25.25, 23.20], 2);
-            L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile\/{z}\/{y}\/{x}.png', {
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile\/{z}\/{y}\/{x}.png', {
     		    maxZoom: 12,
     		    minZoom: 1,
     		    boxZoom: false,
 			    doubleClickZoom: false,
-    		    attribution: 'Tiles &copy; <a href="http://www.esri.com/">Esri</a>'
+    		    attribution: 'Tiles &copy; <a href="https://www.esri.com/">Esri</a>'
             }).addTo(mapGlobal);
 
 	        L.geoJson(researchAreas, {
@@ -253,13 +253,13 @@ $(document).ready(function(){
             // CHANGE THE setView COORDINATES SO THAT THE COUNTRY YOU WANT TO 
             // DISPLAY IS CENTERED CORRECTLY.  THE COORDINATES BELOW CENTERS THE MAP ON THE U.S.
             var mapCountry = L.map('mapCountry').setView([46.0, -97.0], 3);
-            L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile\/{z}\/{y}\/{x}.png', {
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile\/{z}\/{y}\/{x}.png', {
         		maxZoom: 30,
         		minZoom: 1,
         		boxZoom: false,
         		zIndex: 1,
     			doubleClickZoom: false,
-        		attribution: 'Tiles &copy; <a href="http://www.esri.com/">Esri</a>'
+        		attribution: 'Tiles &copy; <a href="https://www.esri.com/">Esri</a>'
             }).addTo(mapCountry);
 
         	L.geoJson(researchAreas, {
@@ -307,15 +307,15 @@ $(document).ready(function(){
             // CHANGE THE setView COORDINATES SO THAT THE LOCAL AREA (E.G. A STATE OR PROVINCE) YOU WANT TO 
             // DISPLAY IS CENTERED CORRECTLY.  THE COORDINATES BELOW CENTERS THE MAP ON NEW YORK STATE.
             var mapLocal = L.map('mapLocal').setView([42.83, -75.50], 7);
-            L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile\/{z}\/{y}\/{x}.png', {
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile\/{z}\/{y}\/{x}.png', {
         		maxZoom: 12,
         		minZoom: 1,
         		boxZoom: false,
     			doubleClickZoom: false,
-        		attribution: 'Tiles &copy; <a href="http://www.esri.com/">Esri</a>'
+        		attribution: 'Tiles &copy; <a href="https://www.esri.com/">Esri</a>'
             }).addTo(mapLocal);
 
-            L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places_Alternate/MapServer/tile\/{z}\/{y}\/{x}.png', {
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places_Alternate/MapServer/tile\/{z}\/{y}\/{x}.png', {
 		        maxZoom: 12,
 		        minZoom: 1,
 		        boxZoom: false,
