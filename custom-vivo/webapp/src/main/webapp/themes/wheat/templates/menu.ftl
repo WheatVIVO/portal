@@ -2,6 +2,10 @@
 
 </header>
 
+<#if showCookieConsent?? && showCookieConsent>
+  <#include "cookieConsent.ftl">
+</#if>
+
 <#include "developer.ftl">
 
 <nav id="top-nav" role="navigation" class="bg-main-l mb3 mb5-ns">
