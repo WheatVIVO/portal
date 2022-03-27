@@ -2,11 +2,13 @@
 
 </div> <!-- #wrapper-content -->
 
+<#include "surveyPopup.ftl">
+
 <footer role="contentinfo" class="cf mt5 pa3">
     <nav role="navigation" class="cf mb4">
        <ul id="header-nav" role="list" class="dt center">
-           <#include "languageSelector.ftl">
-           <li role="listitem" class="dib"><a href="${urls.index}" class="dib pv2 ph3" title="${i18n().identity_index}">${i18n().identity_index}</a></li>
+           
+	   <li role="listitem" class="dib"><a href="${urls.index}" class="dib pv2 ph3" title="${i18n().identity_index}">${i18n().identity_index}</a></li>
            <#if user.loggedIn>
                <#-- COMMENTING OUT THE EDIT PAGE LINK FOR RELEASE 1.5. WE NEED TO IMPLEMENT THIS IN A MORE
                     USER FRIENDLY WAY. PERHAPS INCLUDE A LINK ON THE PAGES THEMSELVES AND DISPLAY IF THE

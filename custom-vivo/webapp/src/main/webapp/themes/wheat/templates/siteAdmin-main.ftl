@@ -12,6 +12,7 @@ ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/admin.css" />')
     <#include "siteAdmin-dataInput.ftl">
     <#include "siteAdmin-siteConfiguration.ftl">
     <#include "siteAdmin-ontologyEditor.ftl">
+    <#include "siteAdmin-wheatVivoAdmin.ftl">
     <#include "siteAdmin-advancedDataTools.ftl">
     <#include "siteAdmin-siteMaintenance.ftl">
 </div>

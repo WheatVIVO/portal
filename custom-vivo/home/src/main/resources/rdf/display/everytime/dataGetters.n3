@@ -1,0 +1,42 @@
+
+<freemarker:footer.ftl> 
+        <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasDataGetter> 
+                 <http://vitro.mannlib.cornell.edu/ns/default#surveyPopupDataGetter> ,
+                 <http://vitro.mannlib.cornell.edu/ns/default#sessionLengthDataGetter> .
+
+<http://vitro.mannlib.cornell.edu/ns/default#sessionLengthDataGetter>
+        a       <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.SessionLengthDataGetter> .
+
+<http://vitro.mannlib.cornell.edu/ns/default#surveyPopupDataGetter>
+        a       <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.SparqlQueryDataGetter> ;
+        <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#query> """
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX obo:      <http://purl.obolibrary.org/obo/>
+PREFIX bibo:     <http://purl.org/ontology/bibo/>
+PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
+PREFIX vitro:    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+PREFIX vivo:     <http://vivoweb.org/ontology/core#>
+PREFIX csx:      <https://database.clin-star.org/ontology/extensions/>
+PREFIX spo:      <http://vivo.wheatinitiative.org/ontology/surveyPopup/> 
+
+SELECT ?surveyPopupEnabled ?surveyPopupLoggedInOnly ?surveyPopupText ?surveyPopupWaitTime WHERE {
+  ?surveyPopup a spo:SurveyPopup .
+  OPTIONAL {
+    ?surveyPopup spo:surveyPopupEnabled ?surveyPopupEnabled
+  }
+  OPTIONAL {
+    ?surveyPopup spo:surveyPopupLoggedInOnly ?surveyPopupLoggedInOnly
+  }
+  OPTIONAL {
+    ?surveyPopup spo:surveyPopupText ?surveyPopupText
+  }
+  OPTIONAL {
+    ?surveyPopup spo:surveyPopupWaitTime ?surveyPopupWaitTime
+  }
+}
+    """ ;                
+	<http://vitro.mannlib.cornell.edu/ontologies/display/1.1#saveToVar>
+                "surveyPopup" .
+

@@ -1,0 +1,64 @@
+@prefix : <http://vivo.wheatinitiative.org/ontology/surveyPopup/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://vivo.wheatinitiative.org/ontology/adminapp/deploymentURI
+
+:SurveyPopup a owl:Class ;
+        rdfs:label "Survey Popup" .
+
+:surveyPopupEnabled a owl:DatatypeProperty ;
+        a owl:FunctionalProperty ;
+	vitro:displayRankAnnot 5 ;
+	rdfs:domain :SurveyPopup ;
+	rdfs:range xsd:boolean ;
+	vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+	vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	rdfs:label "enable popup?"@en .
+
+:surveyPopupText a owl:DatatypeProperty ;
+        a owl:FunctionalProperty ;
+	vitro:displayRankAnnot 10 ;
+	rdfs:domain :SurveyPopup ;
+	vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+	vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	rdfs:label "survey popup text"@en .
+
+:surveyPopupWaitTime a owl:DatatypeProperty ;
+        a owl:FunctionalProperty ;
+	vitro:displayRankAnnot 20 ;
+	rdfs:domain :SurveyPopup ;
+	rdfs:range xsd:integer ;
+	vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+	vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	rdfs:label "wait time in seconds"@en .
+	
+:surveyPopupLoggedInOnly a owl:DatatypeProperty ;
+        a owl:FunctionalProperty ;
+	vitro:displayRankAnnot 30 ;
+	rdfs:domain :SurveyPopup ;
+	rdfs:range xsd:boolean ;
+	vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+	vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	rdfs:label "display to logged-in users (only)?"@en .
