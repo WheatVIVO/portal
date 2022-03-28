@@ -52,6 +52,17 @@
 	vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
 	rdfs:label "wait time in seconds"@en .
 	
+:surveyPopupExpirationTime a owl:DatatypeProperty ;
+        a owl:FunctionalProperty ;
+	vitro:displayRankAnnot 25 ;
+	rdfs:domain :SurveyPopup ;
+	rdfs:range xsd:integer ;
+	vitro:inPropertyGroupAnnot <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+	vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+	rdfs:label "expiration time in minutes"@en .
+	
 :surveyPopupLoggedInOnly a owl:DatatypeProperty ;
         a owl:FunctionalProperty ;
 	vitro:displayRankAnnot 30 ;

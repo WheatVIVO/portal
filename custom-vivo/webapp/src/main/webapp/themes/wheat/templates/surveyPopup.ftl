@@ -14,6 +14,12 @@
     <#assign toWait = 0>
   </#if>
 
+  <#if surveyPopup[0].surveyPopupExpirationTime??>
+    <#assign expirationTime = surveyPopup[0].surveyPopupExpirationTime?number />
+  <#else>
+    <#assign expirationTime = 3000 />
+  </#if>
+
 <style>
   #surveyPopup-close a {
     text-decoration: none;
@@ -28,10 +34,23 @@
 
 <script type="text/javascript" language="javascript">
 
-  setTimeout( function() { $("#surveyPopup").css("display", "block").show(); } , ${toWait}000);
+  var expirationTime = ${expirationTime!3000};
+
+  if(localStorage.dismissPopup && (((new Date()).getTime() - localStorage.dismissPopup) / 60000 > expirationTime)) {
+    localStorage.removeItem("dismissPopup");
+  }
+
+  if(!localStorage.dismissPopup) {
+    setTimeout( function() { $("#surveyPopup").css("display", "block").show(); } , ${toWait}000);
+  }
 
   function closeSurveyPopup() {
     $("#surveyPopup").hide();
+    if (typeof(Storage) !== "undefined") {
+        localStorage.dismissPopup = (new Date()).getTime();
+    } else {
+        // alert("no local storage!");
+    }
     // record dismissal
   }
 

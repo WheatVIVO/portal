@@ -21,7 +21,8 @@ PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX csx:      <https://database.clin-star.org/ontology/extensions/>
 PREFIX spo:      <http://vivo.wheatinitiative.org/ontology/surveyPopup/> 
 
-SELECT ?surveyPopupEnabled ?surveyPopupLoggedInOnly ?surveyPopupText ?surveyPopupWaitTime WHERE {
+SELECT ?surveyPopupEnabled ?surveyPopupLoggedInOnly ?surveyPopupText ?surveyPopupWaitTime 
+        ?surveyPopupExpirationTime WHERE {
   ?surveyPopup a spo:SurveyPopup .
   OPTIONAL {
     ?surveyPopup spo:surveyPopupEnabled ?surveyPopupEnabled
@@ -34,6 +35,9 @@ SELECT ?surveyPopupEnabled ?surveyPopupLoggedInOnly ?surveyPopupText ?surveyPopu
   }
   OPTIONAL {
     ?surveyPopup spo:surveyPopupWaitTime ?surveyPopupWaitTime
+  }
+  OPTIONAL {
+    ?surveyPopup spo:surveyPopupExpirationTime ?surveyPopupExpirationTime
   }
 }
     """ ;                

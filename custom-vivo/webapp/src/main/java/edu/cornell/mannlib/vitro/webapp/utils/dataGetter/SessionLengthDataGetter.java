@@ -6,11 +6,16 @@ import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.wheatvivo.controller.DismissPopupController;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
 import edu.cornell.mannlib.vitro.webapp.controller.VitroRequest;
 
+/**
+ * Data getter that makes the session length in seconds available to the
+ * Freemarker template in a 'sessionLength' variable.
+ */
 public class SessionLengthDataGetter extends DataGetterBase implements DataGetter{
     private final static Log log = LogFactory.getLog(SparqlQueryDataGetter.class);
 
@@ -28,7 +33,7 @@ public class SessionLengthDataGetter extends DataGetterBase implements DataGette
         Map<String, Object> data = new HashMap<String, Object>();
         long sessionLength = (System.currentTimeMillis() - vreq.getSession().getCreationTime()) / 1000;
         data.put("sessionLength", sessionLength);
-        log.info("Session length is " + sessionLength);
+        log.debug("Session length is " + sessionLength);
         return data;  
     }
     
