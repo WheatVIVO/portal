@@ -6,7 +6,6 @@ import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.wheatvivo.controller.DismissPopupController;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
