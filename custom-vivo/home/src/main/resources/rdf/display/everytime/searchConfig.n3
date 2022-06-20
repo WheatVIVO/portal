@@ -1,0 +1,34 @@
+@prefix : <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationSetup#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:documentModifier_sort_first-timestamp
+    a   <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.SelectQueryDocumentModifier> ,
+            <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.DocumentModifier> ;
+    rdfs:label "first timestamp sort field document modifier" ;
+    :hasTargetField "sort_first-timestamp_s" ;
+    :hasSelectQuery """
+    PREFIX vivo: <http://vivoweb.org/ontology/core#> 
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX obo:      <http://purl.obolibrary.org/obo/>
+    PREFIX wheat: <https://wheatvivo.org/ontology/extensions/>
+    SELECT (MIN(?timestamp) AS ?firstTimestamp) WHERE {
+        ?uri wheat:firstTimestamp ?timestamp
+    }
+    """ .
+    
+:documentModifier_sort_date
+    a   <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.SelectQueryDocumentModifier> ,
+            <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.DocumentModifier> ;
+    rdfs:label "date sort field document modifier" ;
+    :hasTargetField "sort_date_s" ;
+    :hasSelectQuery """
+    PREFIX vivo: <http://vivoweb.org/ontology/core#> 
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX obo:      <http://purl.obolibrary.org/obo/>
+    PREFIX wheat: <https://wheatvivo.org/ontology/extensions/>
+    SELECT (MIN(?dateTime) AS ?minDateTime) WHERE {
+        ?uri vivo:dateTimeValue ?dtv .
+        ?dtv vivo:dateTime ?dateTime 
+    }
+    """ .
