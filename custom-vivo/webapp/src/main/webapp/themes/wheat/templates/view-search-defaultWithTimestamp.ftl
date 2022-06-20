@@ -7,7 +7,7 @@
 <a href="${individual.profileUrl}" title="${i18n().name}">${individual.name}</a>
 
 <#if user.loggedIn>
-  <#if firstTimestamp?has_content && firstTimestamp.firstTimestamp??>
+  <#if firstTimestamp?has_content && firstTimestamp[0].firstTimestamp??>
     ${firstTimestamp[0].firstTimestamp}
   </#if>
 </#if>
