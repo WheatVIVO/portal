@@ -487,10 +487,10 @@ public class PagedSearchController extends FreemarkerHttpServlet {
                 String[] sortAndDirection = sort.split(Pattern.quote("|"));
                 log.debug("adding sort field " + sortField);
                 if("DESC".equals(sortAndDirection[1])) {
-                    query.addSortField(sortField, Order.DESC);    
+                    query.addSortField(sortAndDirection[0], Order.DESC);    
                 } else {
                     // default to ascending
-                    query.addSortField(sortField, Order.ASC);
+                    query.addSortField(sortAndDirection[0], Order.ASC);
                 }
             }
         }
