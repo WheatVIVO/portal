@@ -28,14 +28,19 @@
 <#if user.loggedIn>
           Sort by <form style="display: inline;" action="${urls.base}/search" method="GET">
             <select name="sortField" onchange="this.form.submit()">
+              <#if !sortField??>
+                <option selected="selected" value="RELEVANCE">Relevance</option>
+              <#else>
+                <option <#if sortField?? && sortField = "RELEVANCE">selected="selected"</#if> value="RELEVANCE">Relevance</option>
+              </#if>
               <option <#if sortField?? && sortField = "sort_first-timestamp_s|DESC;;sort_date_s|DESC">selected="selected"</#if> value="sort_first-timestamp_s|DESC;;sort_date_s|DESC">Newest</option>
-              <option <#if sortField?? && sortField = "RELEVANCE">selected="selected"</#if> value="RELEVANCE">Relevance</option>
 	    </select>
 	    <#list sortFormHiddenFields as field>
 	      <#if field.name?? && (field.name != "sortField") && (field.name != "startIndex") && field.value??>
                 <input type="hidden" name="${field.name}" value="${field.value?html}"/>
               </#if>
 	    </#list>
+         </form>
 </#if>	
 
 <span id="searchHelp"><a href="${urls.base}/searchHelp" title="${i18n().search_help}">${i18n().not_expected_results}</a></span>

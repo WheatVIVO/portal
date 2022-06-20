@@ -125,10 +125,17 @@
 :firstTimestampDataGetter a datagetter:SparqlQueryDataGetter ;
     display:saveToVar   "firstTimestamp" ;
     display:query       """
+PREFIX vivo:  <http://vivoweb.org/ontology/core#>
 PREFIX wheat: <https://wheatvivo.org/ontology/extensions/>
 
-SELECT DISTINCT ?firstTimestamp WHERE {
-    ?individualUri wheat:firstTimestamp ?firstTimestamp .
+SELECT DISTINCT ?firstTimestamp ?dateTime WHERE {
+    ?individualUri wheat:firstTimestamp ?firstTimestampStr .
+    BIND(STRBEFORE(STR(?firstTimestampStr), "T") AS ?firstTimestamp)
+    OPTIONAL {
+      ?individualUri vivo:dateTimeValue ?dtv .
+      ?dtv vivo:dateTime ?dateTimeStr .
+      BIND(STRBEFORE(STR(?dateTimeStr), "T") AS ?dateTime)
+    }
 }
 
 """ .
