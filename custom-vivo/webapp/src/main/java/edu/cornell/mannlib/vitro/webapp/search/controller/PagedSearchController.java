@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.wheatvivo.search.Param;
 
 import edu.cornell.mannlib.vitro.webapp.application.ApplicationUtils;
 import edu.cornell.mannlib.vitro.webapp.beans.ApplicationBean;
@@ -45,8 +46,8 @@ import edu.cornell.mannlib.vitro.webapp.i18n.I18n;
 import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchEngine;
 import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchFacetField;
 import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchFacetField.Count;
-import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchQuery.Order;
 import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchQuery;
+import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchQuery.Order;
 import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchResponse;
 import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchResultDocument;
 import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchResultDocumentList;
@@ -292,6 +293,9 @@ public class PagedSearchController extends FreemarkerHttpServlet {
                 body.put("nextPage", getNextPageLink(startIndex, hitsPerPage,
                         vreq.getServletPath(), pagingLinkParams));
             }
+            
+            // WheatVIVO addition
+            body.put("sortFormHiddenFields", getSortFormParameters(pagingLinkParams));
 
 	        // VIVO OpenSocial Extension by UCSF
 	        try {
@@ -756,8 +760,16 @@ public class PagedSearchController extends FreemarkerHttpServlet {
         return Collections.unmodifiableMap(table);
     }
     
-    // WheatVIVO addition
+    // WheatVIVO additions
     protected static String getParamSortField(VitroRequest vreq) {
         return vreq.getParameter(PARAM_SORTFIELD);
+    }
+    
+    private List<Param> getSortFormParameters(ParamMap parameterMap) {
+        List<Param> paramList = new ArrayList<Param>();
+        for(String key : parameterMap.keySet()) {            
+            paramList.add(new Param(key, parameterMap.get(key)));
+        }
+        return paramList;
     }
 }
