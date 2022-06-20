@@ -748,11 +748,6 @@ public class PagedSearchController extends FreemarkerHttpServlet {
     
     // WheatVIVO addition
     protected static String getParamSortField(VitroRequest vreq) {
-        String value = vreq.getParameter(PARAM_SORTFIELD);
-        if(value != null) {
-            return value;
-        } else {
-            return "sort_year_s|DESC";
-        }
+        return vreq.getParameter(PARAM_SORTFIELD);
     }
 }
