@@ -348,8 +348,9 @@ public class PagedSearchController extends FreemarkerHttpServlet {
         if( qtxt == null || "".equals( qtxt.trim() ) )
         	return I18n.text(vreq, "enter_search_term");
         
-        if( qtxt.equals("*:*") )
-        	return I18n.text(vreq, "invalid_search_term") ;
+        // WheatVIVO allow wildcard search
+        //if( qtxt.equals("*:*") )
+        //	return I18n.text(vreq, "invalid_search_term") ;
         
         return null;
     }
