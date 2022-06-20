@@ -253,7 +253,9 @@ public class PagedSearchController extends FreemarkerHttpServlet {
                 } else if ( classGroupFilterRequested && !typeFilterRequested ) {
                     // Search request is for a ClassGroup, so add rdf:type search refinement links
                     // but try to filter out classes that are subclasses
-                    body.put("classLinks", getVClassLinks(vclassDao, docs, response, queryText));                       
+                    // WheatVIVO add sortField
+                    body.put("classLinks", getVClassLinks(vclassDao, docs,
+                            response, queryText, getParamSortField(vreq)));                       
                     pagingLinkParams.put(PARAM_CLASSGROUP, classGroupParam);
 
                 } else {
@@ -387,13 +389,16 @@ public class PagedSearchController extends FreemarkerHttpServlet {
 			VClassGroup localizedVcg = vcgfr.getGroup(groupURI);
             long count = cgURItoCount.get( groupURI );
             if (localizedVcg.getPublicName() != null && count > 0 )  {
-                classGroupLinks.add(new VClassGroupSearchLink(qtxt, localizedVcg, count));
+                classGroupLinks.add(new VClassGroupSearchLink(qtxt, localizedVcg, count, getParamSortField(vreq)));
             }
         }
         return classGroupLinks;
     }
 
-    private List<VClassSearchLink> getVClassLinks(VClassDao vclassDao, SearchResultDocumentList docs, SearchResponse rsp, String qtxt){        
+    // WheatVIVO add sortField
+    private List<VClassSearchLink> getVClassLinks(VClassDao vclassDao,
+            SearchResultDocumentList docs, SearchResponse rsp, String qtxt,
+            String sortField){        
         HashSet<String> typesInHits = getVClassUrisForHits(docs);                                
         List<VClass> classes = new ArrayList<VClass>(typesInHits.size());
         Map<String,Long> typeURItoCount = new HashMap<String,Long>();        
@@ -434,7 +439,8 @@ public class PagedSearchController extends FreemarkerHttpServlet {
         List<VClassSearchLink> vClassLinks = new ArrayList<VClassSearchLink>(classes.size());
         for (VClass vc : classes) {                        
             long count = typeURItoCount.get(vc.getURI());
-            vClassLinks.add(new VClassSearchLink(qtxt, vc, count ));
+            // WheatVIVO add sortField
+            vClassLinks.add(new VClassSearchLink(qtxt, vc, count, sortField ));
         }
         
         return vClassLinks;
@@ -527,8 +533,10 @@ public class PagedSearchController extends FreemarkerHttpServlet {
     
     public static class VClassGroupSearchLink extends LinkTemplateModel {        
         long count = 0;
-        VClassGroupSearchLink(String querytext, VClassGroup classgroup, long count) {
-            super(classgroup.getPublicName(), "/search", PARAM_QUERY_TEXT, querytext, PARAM_CLASSGROUP, classgroup.getURI());
+        // WheatVIVO add sortField parameter
+        VClassGroupSearchLink(String querytext, VClassGroup classgroup, long count, String sortField) {
+            super(classgroup.getPublicName(), "/search", PARAM_QUERY_TEXT, querytext,
+                    PARAM_CLASSGROUP, classgroup.getURI(), PARAM_SORTFIELD, sortField);
             this.count = count;
         }
         
@@ -537,8 +545,10 @@ public class PagedSearchController extends FreemarkerHttpServlet {
     
     public static class VClassSearchLink extends LinkTemplateModel {
         long count = 0;
-        VClassSearchLink(String querytext, VClass type, long count) {
-            super(type.getName(), "/search", PARAM_QUERY_TEXT, querytext, PARAM_RDFTYPE, type.getURI());
+        // WheatVIVO add sortField parameter
+        VClassSearchLink(String querytext, VClass type, long count, String sortField) {
+            super(type.getName(), "/search", PARAM_QUERY_TEXT, querytext,
+                    PARAM_RDFTYPE, type.getURI(), PARAM_SORTFIELD, sortField);
             this.count = count;
         }
         

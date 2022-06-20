@@ -1,0 +1,134 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix datagetter: <java:edu/cornell/mannlib/vitro/webapp/utils/datagetter/> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix role:  <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> . 
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@base <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration> .
+
+<http://purl.org/ontology/bibo/Report> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#EditorialArticle> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#EmeritusProfessor> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#PopulatedPlace> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/Letter> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Building> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#InformationResource> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/Consultant> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/Article> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#GeographicLocation> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/Thesis> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Agreement> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/ClinicalFaculty> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#School> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/TRCatalogLink> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Postdoc> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#ResearchOrganization> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/public#File> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Hospital> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#University> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#FacultyMember> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<https://wheatvivo.org/ontology/extensions/ExpertWorkingGroup> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.wheatinitiative.org/ontology/adminapp/MergeRule> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://aims.fao.org/aos/geopolitical.owl#non_self_governing> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#AcademicDepartment> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://aims.fao.org/aos/geopolitical.owl#geographical_region> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.obolibrary.org/obo/IAO_0000030> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#Location> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Video> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#ClinicalOrganization> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#NonAcademic> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Institute> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#PrincipalInvestigatorRole> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#WorkingPaper> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#CoPrincipalInvestigatorRole> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#GovernmentAgency> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#Work> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/Manuscript> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#InvestigatorRole> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#AdministratorRole> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/public#FileByteStream> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#DateTimeValuePrecision> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Abstract> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Review> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.wheatinitiative.org/ontology/ExternalToWheat> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://aims.fao.org/aos/geopolitical.owl#self_governing> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Department> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<rcuk:retrieved> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Role> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2002/07/owl#Thing> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#URLLink> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://xmlns.com/foaf/0.1/Organization> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.wheatinitiative.org/ontology/surveyPopup/SurveyPopup> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Campus> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/CourtesyFaculty> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Country> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/Book> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#Organization> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#FundingOrganization> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Grant> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#Contact> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.obolibrary.org/obo/ERO_0000783> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Facility> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/Journal> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#Telephone> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/Document> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/CourtesyFacultyPosition> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://xmlns.com/foaf/0.1/Agent> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/NonGovernmentalOrganization> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/MiscFaculty> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Company> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#Email> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#CoreLaboratory> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#PostdocPosition> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ClassGroup> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#DateTimeValue> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/EditedBook> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#ConferencePaper> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#DependentResource> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.orcid.org/ns/work/work> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Center> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://xmlns.com/foaf/0.1/Person> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.ufl.edu/ontology/vivo-ufl/FullTextURL> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/Chapter> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivo.wheatinitiative.org/ontology/adminapp/MergeDataSource> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#DateTimeInterval> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Project> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#URL> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#Fax> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Program> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#Relationship> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#NonAcademicPosition> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://www.w3.org/2006/vcard/ns#Address> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.obolibrary.org/obo/UO_0000280> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://aims.fao.org/aos/geopolitical.owl#economic_region> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://purl.org/ontology/bibo/DocumentStatus> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+<http://vivoweb.org/ontology/core#AcademicDegree> <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#hasCustomView> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#searchViewWithTimestamp> .
+
+:searchViewWithTimestamp
+    a display:customViewForIndividual ;
+    display:appliesToContext "SEARCH" ;
+    display:hasTemplate      "view-search-defaultWithTimestamp.ftl" ;
+    display:hasDataGetter    :firstTimestampDataGetter .
+
+:firstTimestampDataGetter a datagetter:SparqlQueryDataGetter ;
+    display:saveToVar   "firstTimestamp" ;
+    display:query       """
+PREFIX wheat: <https://wheatvivo.org/ontology/extensions/>
+
+SELECT DISTINCT ?firstTimestamp WHERE {
+    ?individualUri wheat:firstTimestamp ?firstTimestamp .
+}
+
+""" .
