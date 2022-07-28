@@ -25,7 +25,6 @@
 </h2>
 
 <#-- WheatVIVO sort options -->
-<#if user.loggedIn>
           Sort by <form style="display: inline;" action="${urls.base}/search" method="GET">
             <select name="sortField" onchange="this.form.submit()">
               <#if !sortField??>
@@ -41,7 +40,6 @@
               </#if>
 	    </#list>
          </form>
-</#if>	
 
 <span id="searchHelp"><a href="${urls.base}/searchHelp" title="${i18n().search_help}">${i18n().not_expected_results}</a></span>
 <div class="contentsBrowseGroup">
