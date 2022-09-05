@@ -2,6 +2,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+:documentModifier_classgroup_name
+    a   <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.SelectQueryDocumentModifier> ,
+            <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.DocumentModifier> ;
+    rdfs:label "classgroup name document modifier" ;
+    :hasTargetField "ALLTEXT" ;
+    :hasSelectQuery """
+    PREFIX vitro:    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+    PREFIX vivo: <http://vivoweb.org/ontology/core#> 
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX obo:      <http://purl.obolibrary.org/obo/>
+    PREFIX wheat: <https://wheatvivo.org/ontology/extensions/>
+    SELECT ?label  WHERE {
+        ?uri vitro:mostSpecificType ?mst .
+	?mst vitro:inClassGroup ?group .
+	?group rdfs:label ?label
+    }
+    """ .
+ 
 :documentModifier_sort_first-timestamp
     a   <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.SelectQueryDocumentModifier> ,
             <java:edu.cornell.mannlib.vitro.webapp.searchindex.documentBuilding.DocumentModifier> ;
