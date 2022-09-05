@@ -134,7 +134,23 @@ SELECT DISTINCT ?firstTimestamp ?dateTime WHERE {
     OPTIONAL {
       ?individualUri vivo:dateTimeValue ?dtv .
       ?dtv vivo:dateTime ?dateTimeStr .
+      FILTER(
+        NOT EXISTS { ?dtv vivo:dateTimePrecision ?somePrecision }
+	|| EXISTS { ?dtv vivo:dateTimePrecision vivo:yearMonthDayPrecision }
+      )
       BIND(STRBEFORE(STR(?dateTimeStr), "T") AS ?dateTime)
+    }
+    OPTIONAL {
+      ?individualUri vivo:dateTimeValue ?dtv .
+      ?dtv vivo:dateTime ?dateTimeStr .
+      ?dtv vivo:dateTimePrecision vivo:yearPrecision .
+      BIND(STRBEFORE(STR(?dateTimeStr), "-") AS ?dateTime)
+    }
+    OPTIONAL {
+      ?individualUri vivo:dateTimeValue ?dtv .
+      ?dtv vivo:dateTime ?dateTimeStr .
+      ?dtv vivo:dateTimePrecision vivo:yearMonthPrecision .
+      BIND(SUBSTR(STR(?dateTimeStr), 1, 7) AS ?dateTime)
     }
 }
 
