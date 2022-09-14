@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,6 +17,7 @@ import edu.cornell.mannlib.vitro.webapp.controller.freemarker.FreemarkerHttpServ
 /**
     Record cookie consent for the active session.
 */
+@WebServlet(name = "CookieConsentController", urlPatterns = {"/acceptCookies/*"} )
 public class CookieConsentController extends FreemarkerHttpServlet {
 
     private static final long serialVersionUID = 1L;
