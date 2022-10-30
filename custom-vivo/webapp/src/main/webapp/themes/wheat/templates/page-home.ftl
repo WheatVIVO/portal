@@ -41,9 +41,10 @@
 
         <section id="intro" role="region" class="fl-l w-30-l">
 
-            <p style="padding:0.5em;margin-bottom:1em;background-color:#fed;"><strong>This site is still under development. 
-We value your input and suggestions: if you find any problems, incorrect information or have some suggestions to improve the site, please let us know on <a style="font-weight:bold;" href="mailto:wheatvivo@julius-kuehn.de">wheatvivo@julius-kuehn.de</a>.
-Thank you for your co-operation.</strong></p>
+            <p style="padding:0.5em;margin-bottom:1em;background-color:#fed;"><strong>We are continually maintaining and 
+improving the site and welcome your input and suggestions either via the short survey that will pop up or via 
+<a style="font-weight:bold;" href="mailto:wheatvivo@julius-kuehn.de">wheatvivo@julius-kuehn.de</a>.
+We appreciate your support.</strong></p>
 
             <p class="mb3">${i18n().intro_para1}</p>
             <p>${i18n().intro_para2}</p>
