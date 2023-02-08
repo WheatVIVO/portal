@@ -25,7 +25,27 @@
 <#include "individual-orcidInterface.ftl">
 
 <section id="individual-intro" class="vcard person" role="region">
-        
+ 
+        <#if editable>
+            <#if claimSources?size &gt; 0>
+                <div style="clear:both;">
+                <br />${i18n().claim_publications_by}<br />
+                <#if claimSources?seq_contains("doi")>
+                    <form action="${urls.base}/createAndLink/doi" method="get" style="display: inline-block;">
+                        <input type="hidden" name="profileUri" value="${individual.uri}" />
+                        <input type="submit" class="submit" value="${i18n().claim_publications_by_doi}" />
+                    </form>
+                </#if>
+                <#if claimSources?seq_contains("pmid")>
+                    <form action="${urls.base}/createAndLink/pmid" method="get" style="display: inline-block;">
+                        <input type="hidden" name="profileUri" value="${individual.uri}" />
+                        <input type="submit" class="submit" value="${i18n().claim_publications_by_pmid}" />
+                    </form>
+                </#if>
+                </div>
+            </#if>
+        </#if>
+       
     <#include "individual-adminPanel.ftl">
     
     <section id="individual-info" ${infoClass!} class="flex-l justify-between-l relative" role="region">
