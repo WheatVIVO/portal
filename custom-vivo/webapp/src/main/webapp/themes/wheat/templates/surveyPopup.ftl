@@ -34,14 +34,18 @@
 
 <script type="text/javascript" language="javascript">
 
-  var expirationTime = ${expirationTime!3000};
+  <#if expirationTime??>
+  var expirationTime = ${expirationTime?c};
+  <#else>
+  var expirationTime = 3000;
+  </#if>
 
   if(localStorage.dismissPopup && (((new Date()).getTime() - localStorage.dismissPopup) / 60000 > expirationTime)) {
     localStorage.removeItem("dismissPopup");
   }
 
   if(!localStorage.dismissPopup) {
-    setTimeout( function() { $("#surveyPopup").css("display", "block").show(); } , ${toWait}000);
+    setTimeout( function() { $("#surveyPopup").css("display", "block").show(); } , ${toWait?c}000);
   }
 
   function closeSurveyPopup() {
